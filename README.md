@@ -1,12 +1,12 @@
-# 🤖 GPT-4o-mini チャットアプリ
+# 🤖 GPT-5-mini チャットアプリ
 
-Next.js 15とOpenAI APIを使用したモダンなAIチャットアプリケーションです。
+Next.js 15とOpenAI GPT-5-mini APIを使用したモダンなAIチャットアプリケーションです。
 
 ## ✨ 特徴
 
 - 🚀 Next.js 15 (App Router)
 - 🎨 Tailwind CSS によるモダンなUI
-- 🤖 OpenAI GPT-4o-mini API統合
+- 🤖 OpenAI GPT-5-mini API統合（2025年8月最新）
 - 💬 リアルタイムチャット機能
 - 📱 レスポンシブデザイン
 - ⚡ TypeScript完全対応
@@ -77,7 +77,7 @@ gpt5-mini-chat-app/
 │   ├── app/
 │   │   ├── api/
 │   │   │   └── chat/
-│   │   │       └── route.ts        # ChatGPT API エンドポイント
+│   │   │       └── route.ts        # GPT-5-mini API エンドポイント
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx                # メインページ
@@ -85,6 +85,25 @@ gpt5-mini-chat-app/
 │       └── ChatApp.tsx             # チャットコンポーネント
 ├── env.example                     # 環境変数テンプレート
 └── README.md
+```
+
+## ⚡ GPT-5-mini vs GPT-4o-mini の違い
+
+### 🔄 **主な変更点**
+- **パラメータ名**: `max_tokens` → `max_completion_tokens`
+- **温度設定**: `temperature` パラメータは削除（デフォルト値のみ）
+- **性能向上**: より高い推論能力と高速処理
+- **将来性**: 2025年最新技術で長期サポート
+
+### 📝 **移行時の注意点**
+```typescript
+// GPT-4o-mini（従来）
+max_tokens: 1000,
+temperature: 0.7
+
+// GPT-5-mini（最新）
+max_completion_tokens: 1000,
+// temperature: 削除
 ```
 
 ## 🚀 機能
@@ -108,7 +127,7 @@ gpt5-mini-chat-app/
 - **フレームワーク**: Next.js 15
 - **言語**: TypeScript
 - **スタイリング**: Tailwind CSS
-- **AI API**: OpenAI GPT-4o-mini
+- **AI API**: OpenAI GPT-5-mini
 - **デプロイ**: Vercel (推奨)
 
 ## 📝 使用方法
