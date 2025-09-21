@@ -14,10 +14,10 @@ export async function POST(request: NextRequest) {
     }
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini", // GPT-5-miniはまだリリースされていないため、gpt-4o-miniを使用
+      model: "gpt-5-mini", // GPT-5-miniを使用
       messages: [{ role: "user", content: message }],
-      max_tokens: 1000,
-      temperature: 0.7,
+      max_completion_tokens: 1000, // GPT-5-miniでは max_completion_tokens を使用
+      // temperature: GPT-5-miniではデフォルト値(1)のみサポート
     });
 
     return Response.json({ 
